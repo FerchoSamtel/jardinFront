@@ -1,0 +1,330 @@
+.bottomBorder{
+	position: relative;
+	float: left;
+	background-color: rgb(30, 23, 141);
+	width: 100%;
+	height: 7px;
+}
+.bottomBorder2{
+	/* position: relative; */
+	float: left;
+	background-color: rgb(71, 148, 199);
+	width: 100%;
+  height: 7px;
+  margin-top: 4px;
+}
+
+.bottomBorder3{
+	/* position: relative; */
+	float: left;
+	background-color: rgb(71, 148, 199);
+	width: 100%;
+  height: 7px;
+  margin-top: -1px;
+}
+
+.cbp-spmenu h3 a {
+	color: black;
+	font-size: 0.5em;
+	display: inline;
+}
+
+.cbp-spmenu h3 a:hover {
+	background-color: white;
+}
+
+.navbar-toggler{
+	border: none;
+}
+
+.nav-link{
+	padding-left: 10px;
+	font-weight: bold;
+}
+
+.cbp-spmenu-open_lv2 a {
+	color: black !important;
+	font-weight: bold !important;
+}
+
+.cbp-spmenu-open_lv2 a:hover {
+	background-color: white !important;
+	color: #D00A1A !important;
+}
+
+.cbp-spmenu-open_lv1 a div span.oi {
+	display: none;
+}
+
+.cbp-spmenu-open_lv1 a:hover div span.oi {
+	display: block;
+}
+
+.cbp-spmenu-open_lv1 a.cbp-spmenu-active div span.oi {
+	display: block;
+}
+
+.cbp-spmenu-open_lv1 a.cbp-spmenu-active {
+	background: white;
+	font-weight: bold !important;
+	color: #D00A1A !important;
+}
+
+.cbp-spmenu-active {
+	background: Gainsboro;
+	font-weight: bold !important;
+	color: black !important;
+}
+
+.cbp-spmenu-open a.cbp-spmenu-active div div.red-block {
+	display: block;
+}
+
+.cbp-spmenu-open a:hover div div.red-block {
+	display: block;
+}
+
+.cbp-spmenu {
+	background: white;
+	border: 1px solid gray;
+	position: fixed;
+}
+
+.cbp-spmenu h3 {
+	color: gray;
+	font-size: 1.9em;
+	padding: 10px;
+	margin: 0;
+	font-weight: 300;
+	background: white;
+}
+
+.cbp-spmenu a {
+	display: block;
+	color: gray;
+	font-size: 1.1em;
+	font-weight: 300;
+}
+
+.red-block {
+	position: relative;
+	float: left;
+	left: -1em;
+	top: -0.5em;
+	height: 2.4em;
+	width: 0.3em;
+	background-color:  rgb(30, 23, 141);
+	display: none;
+}
+
+.cbp-spmenu a:hover {
+	background: Gainsboro;
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.cbp-spmenu a:active {
+	background: Gainsboro;
+	color: black;
+}
+
+/* Orientation-dependent styles for the content of the menu */
+
+.cbp-spmenu-vertical {
+
+	width: 200px;
+	height: 100%;
+	top: 0;
+	z-index: 1000;
+}
+
+.cbp-spmenu-vertical a {
+	/*border-bottom: 1px solid #258ecd;*/
+	padding-top: 0.5em;
+	padding-right: 1em;
+	padding-left: 1em;
+	padding-bottom: 0.5em;
+}
+
+.cbp-spmenu-vertical2 {
+
+	width: 265px;
+	height: 100%;
+	top: 0;
+	z-index: 1000;
+}
+
+.cbp-spmenu-vertical2 a {
+	/*border-bottom: 1px solid #258ecd;*/
+	padding-top: 0.5em;
+	padding-right: 1em;
+	padding-left: 1em;
+	padding-bottom: 0.5em;
+}
+
+.cbp-spmenu-horizontal {
+	width: 100%;
+	height: 150px;
+	left: 0;
+	z-index: 1000;
+	overflow: hidden;
+}
+
+.cbp-spmenu-horizontal h3 {
+	height: 100%;
+	width: 20%;
+	float: left;
+}
+
+.cbp-spmenu-horizontal a {
+	float: left;
+	width: 20%;
+	padding: 0.8em;
+	border-left: 1px solid #258ecd;
+}
+
+/* Vertical menu that slides from the left or right */
+
+.cbp-spmenu-left {
+	left: -260px;
+}
+
+.cbp-spmenu-left.cbp-spmenu-open {
+	left: 0px;
+}
+
+.cbp-spmenu-left.cbp-spmenu-open_lv1 {
+	left: 260px;
+}
+
+.cbp-spmenu-left.cbp-spmenu-open_lv2 {
+	left: 520px;
+}
+
+/* RIGH */
+
+.cbp-spmenu-r {
+	right: -263px;
+}
+
+.cbp-spmenu-r.cbp-spmenu-open {
+	right: 0px;
+}
+
+.cbp-spmenu-r.cbp-spmenu-open_lv1 {
+	right: 260px;
+}
+
+.cbp-spmenu-r.cbp-spmenu-open_lv2 {
+	right: 520px;
+}
+
+.cbp-spmenu-right {
+	right: -240px;
+}
+.cbp-spmenu-right.cbp-spmenu-open {
+	right: 0px;
+}
+
+/* Horizontal menu that slides from the top or bottom */
+
+.cbp-spmenu-top {
+	top: -150px;
+}
+
+.cbp-spmenu-bottom {
+	bottom: -150px;
+}
+
+.cbp-spmenu-top.cbp-spmenu-open {
+	top: 0px;
+}
+
+.cbp-spmenu-bottom.cbp-spmenu-open {
+	bottom: 0px;
+}
+
+/* Push classes applied to the body */
+
+.cbp-spmenu-push {
+	overflow-x: hidden;
+	position: relative;
+	left: 0;
+}
+
+.cbp-spmenu-push-toright {
+	left: 240px;
+}
+
+.cbp-spmenu-push-toleft {
+	left: -240px;
+}
+
+/* Transitions */
+
+.cbp-spmenu,
+.cbp-spmenu-push {
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+/* Example media queries */
+
+@media screen and (max-width: 55.1875em){
+
+	.cbp-spmenu-horizontal {
+		font-size: 75%;
+		height: 110px;
+	}
+
+	.cbp-spmenu-top {
+		top: -110px;
+	}
+
+	.cbp-spmenu-bottom {
+		bottom: -110px;
+	}
+}
+
+@media screen and (max-height: 26.375em){
+
+	.cbp-spmenu-vertical {
+		font-size: 90%;
+		width: 190px;
+	}
+
+	.cbp-spmenu-left,
+	.cbp-spmenu-push-toleft {
+		left: -190px;
+	}
+	.cbp-spmenu-r,
+	.cbp-spmenu-push-toleft {
+		left: -190px;
+	}
+
+	.cbp-spmenu-right {
+		right: -190px;
+	}
+
+	.cbp-spmenu-push-toright {
+		left: 190px;
+	}
+}
+
+.image{
+  background-color: rgb(245, 244, 244);
+ width: 30px;
+ border-radius: 30px;
+}
+.image:hover{
+  background-color: rgb(226, 223, 223);
+}
+
+.icon{
+  font-size: 20px;
+}
+
+
+

@@ -1,0 +1,125 @@
+<!-- Primer panel -->
+<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left border border-0 mt-5 mt-5 pt-2" id="cbp-spmenu-s1">
+  <div class="bottomBorder2"></div>
+  <div class="pt-3">
+    <!-- <a id="procesos" (click)="menu('procesos','cbp-spmenu-s2','1')">
+      <div>
+        <div class="red-block">&nbsp;</div>Usuario<span class="oi oi-chevron-right" style="float: right"></span>
+      </div>
+    </a> -->
+    <a id="cargadearchivos" (click)="cerrarMenu()" [routerLink]="['/User']" routerLinkActive="router-link-active">
+      <div>
+        <div class="red-block">&nbsp;</div>Usuario <span class="oi oi-chevron-right" style="float: right"></span>
+      </div>
+    </a>
+    <a id="cargadearchivos" (click)="cerrarMenu()" [routerLink]="['/Home']" routerLinkActive="router-link-active">
+      <div>
+        <div class="red-block">&nbsp;</div>Area <span class="oi oi-chevron-right" style="float: right"></span>
+      </div>
+    </a>
+    <a id="cargadearchivos" (click)="cerrarMenu()" [routerLink]="['/Home']" routerLinkActive="router-link-active">
+      <div>
+        <div class="red-block">&nbsp;</div>Materia <span class="oi oi-chevron-right" style="float: right"></span>
+      </div>
+    </a>
+    <a id="cargadearchivos" (click)="cerrarMenu()" [routerLink]="['/Home']" routerLinkActive="router-link-active">
+      <div>
+        <div class="red-block">&nbsp;</div>Periodo <span class="oi oi-chevron-right" style="float: right"></span>
+      </div>
+    </a>
+    <a id="cargadearchivos" (click)="cerrarMenu()" [routerLink]="['/Home']" routerLinkActive="router-link-active">
+      <div>
+        <div class="red-block">&nbsp;</div>Grupo <span class="oi oi-chevron-right" style="float: right"></span>
+      </div>
+    </a>
+    <a id="cargadearchivos" (click)="cerrarMenu()" [routerLink]="['/Home']" routerLinkActive="router-link-active">
+      <div>
+        <div class="red-block">&nbsp;</div>Grado <span class="oi oi-chevron-right" style="float: right"></span>
+      </div>
+    </a>
+    <a id="cargadearchivos" (click)="cerrarMenu()" [routerLink]="['/Home']" routerLinkActive="router-link-active">
+      <div>
+        <div class="red-block">&nbsp;</div>Periodo <span class="oi oi-chevron-right" style="float: right"></span>
+      </div>
+    </a>
+    <a id="cargadearchivos" (click)="cerrarMenu()" [routerLink]="['/Home']" routerLinkActive="router-link-active">
+      <div>
+        <div class="red-block">&nbsp;</div>Logro <span class="oi oi-chevron-right" style="float: right"></span>
+      </div>
+    </a>
+    <a id="cargadearchivos" (click)="cerrarMenu()" [routerLink]="['/Home']" routerLinkActive="router-link-active">
+      <div>
+        <div class="red-block">&nbsp;</div>Notas <span class="oi oi-chevron-right" style="float: right"></span>
+      </div>
+    </a>
+    <a id="cargadearchivos" (click)="cerrarMenu()" [routerLink]="['/Home']" routerLinkActive="router-link-active">
+      <div>
+        <div class="red-block">&nbsp;</div>Salones <span class="oi oi-chevron-right" style="float: right"></span>
+      </div>
+    </a>
+    <a id="cargadearchivos" (click)="cerrarMenu()" [routerLink]="['/Home']" routerLinkActive="router-link-active">
+      <div>
+        <div class="red-block">&nbsp;</div>Estudiante <span class="oi oi-chevron-right" style="float: right"></span>
+      </div>
+    </a>
+    <a id="cargadearchivos" (click)="cerrarMenu()" [routerLink]="['/Home']" routerLinkActive="router-link-active">
+      <div>
+        <div class="red-block">&nbsp;</div>Pago <span class="oi oi-chevron-right" style="float: right"></span>
+      </div>
+    </a>
+    <a id="cargadearchivos" (click)="cerrarMenu()" [routerLink]="['/Home']" routerLinkActive="router-link-active">
+      <div>
+        <div class="red-block">&nbsp;</div>Reportes <span class="oi oi-chevron-right" style="float: right"></span>
+      </div>
+    </a>
+  </div>
+</nav>
+
+<!-- Opciones Reproceso > Actualizar -->
+<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s3">
+  <h3>&nbsp;</h3>
+  <a (click)="cerrarMenu()">Ejecución Parcial</a>
+  <a (click)="cerrarMenu()">Cierre Mensual</a>
+</nav>
+<!-- Opciones Configuracion -->
+
+<!-- SEGUNDO PANEL -->
+<nav class="cbp-spmenu cbp-spmenu-vertical2 cbp-spmenu-r border border-0 mt-5 mt-5 pt-2" id="cbp-spmenu-s2">
+  <div class="bottomBorder2"></div>
+  <div class="mt-5">
+    <div class="row">
+      <div class="col-2">
+        <img class="ml-1" src="assets/img/user.png" width="210%" height="45px" />
+      </div>
+      <div class="col-10">
+        <div class="">Fernando Guayambuco Alfonso</div>
+        <div class="mt-1">Administrador</div>
+      </div>
+    </div>
+    <div>
+      <a class="text-center mt-3">Ver perfil</a>
+      <hr>
+      <a href="">Enviar PQRS</a>
+      <hr>
+      <a href="">Cerrar Sesión</a>
+      <hr>
+    </div>
+  </div>
+</nav>
+
+<!-- Boton del menu -->
+<nav class="navbar navbar-light">
+  <div>
+    <a class="navbar-toggler form-control" (click)="menuPrincipal('cbp-spmenu-s1')">
+      <span class="navbar-toggler-icon mt-1">
+        <h2 class="ml-5 font-weight-bold ">Menú</h2>
+      </span>
+    </a>
+  </div>
+  <img class="rounded mx-auto d-block" style="margin-left: 100px;" src="assets/img/logo.png" width="20%"
+    height="40px" />
+  <a (click)="menuPrincipal('cbp-spmenu-s2')" class="image"><img class="rounded float-right " src="assets/img/abajo.png"
+      width="100%" height="30px"></a>
+</nav>
+<div class="bottomBorder "></div>
+<div class="spacer"></div>

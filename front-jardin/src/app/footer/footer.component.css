@@ -1,0 +1,33 @@
+.footer-santander{
+	height: 50px;
+  background-color: #0b5377;
+	position: fixed;
+	float: left;
+	width: 100%;
+	bottom: 0px;
+	z-index: 1000;
+}
+
+.footer-santander span img {
+	position: relative;
+	top: 15px;
+	margin-left: 15px;
+}
+
+.texto{
+  text-align: center;
+	position: relative;
+	top: 8px;
+	color: white;
+	font-size: 0.8em;
+	margin-right: 15px;
+}
+
+.pre-footer{
+	height: 70px;
+}
+
+.img{
+margin: 5px;
+  /* margin-top: -100px; */
+}

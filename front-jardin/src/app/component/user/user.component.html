@@ -1,0 +1,74 @@
+<div class="container-fluid">
+  <div class="card mt-4">
+    <div class="card-header title-header">
+      <h2 class="card-title font-weight-bold font-weight-light ">{{ title }}</h2>
+    </div>
+    <div class="card-body">
+      <a class="btn-add text-white float-right" (click)="openModalWithClass(template)">Agregar</a>
+      <div class="table-responsive-lg mt-5">
+        <table class="table table-bordered table-md text-center table-borderless table-striped">
+          <thead class="text-white thead">
+            <tr>
+              <th>Id</th>
+              <th>Nombres</th>
+              <th>Apellido</th>
+              <th>Tipo documento</th>
+              <th>Número documneto</th>
+              <th>Fecha nacimiento</th>
+              <th>Email</th>
+              <th>Estado</th>
+              <th>Opciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of items">
+              <td>1</td>
+              <td>Pepito</td>
+              <td>Perez</td>
+              <td>C.C</td>
+              <td>10224093243</td>
+              <td>1995-05-10</td>
+              <td>Fernando4567@Hotmail.com</td>
+              <td>Activo</td>
+              <td>
+                <a title="Editar" class="btn btn-primary text-white" (click)="openModalWithClass(templateEdit)"><span
+                    class="oi oi-pencil"></span></a>
+                <a title="Eliminar" class="btn btn-danger text-white ml-1"
+                  (click)="openModalWithClassDelete(templateDelete)"><span class="oi oi-trash"></span></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- MODAL ADD-->
+      <ng-template #template>
+        <app-create-user [modalRef]="modalRef"></app-create-user>
+      </ng-template>
+
+      <!-- MODAL EDIT-->
+      <ng-template #templateEdit>
+        <app-update-user [modalRef]="modalRef"></app-update-user>
+      </ng-template>
+
+      <!-- MODAL DELETE-->
+      <ng-template #templateDelete>
+        <div class="card-header title-header">
+          <h2 class="card-title font-weight-bold font-weight-light ">{{ titleDelete }}</h2>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="text-center text-warning mt-2"><span class="oi oi-warning size-icon-delete"></span></div>
+            <div class="text-center h4 mt-3">
+              ¿Esta seguro de eliminar el usuario pepito perez?
+              <div class="modal-footer d-flex justify-content-center mt-4">
+                <a aria-label="Close" (click)="modalRef.hide()" class="btn btn-danger text-white">Cancelar</a>
+                <a class="btn-add text-white">Eliminar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+

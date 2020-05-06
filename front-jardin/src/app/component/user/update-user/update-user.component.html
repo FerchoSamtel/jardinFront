@@ -1,0 +1,171 @@
+<div class="card-header title-header">
+  <h2 class="card-title font-weight-bold font-weight-light ">{{ titleEdit }}</h2>
+</div>
+<div class="modal-body">
+  <div class="container card">
+    <form [formGroup]="profileForm" class="mt-2 p-1 table-responsive-lg">
+      <div class="float-right mt-2 h6">Los campos con <span class="text-danger font-weight-bold h6">*</span> son
+        obligatorios.</div>
+      <table class="example-full-width " cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <mat-label>Nombres: <span class="text-danger font-weight-bold h6">*</span></mat-label>
+              <input matInput placeholder="Ej. Francisco" formControlName="name">
+              <mat-error *ngIf="profileForm.controls['name'].errors?.required">Este campo es requerido.</mat-error>
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="example-full-width">
+              <mat-label>Apellidos: <span class="text-danger font-weight-bold h6">*</span></mat-label>
+              <input matInput placeholder="Ej. Gomez" formControlName="lastName">
+              <mat-error *ngIf="profileForm.controls['lastName'].errors?.required">Este campo es requerido.</mat-error>
+            </mat-form-field>
+          </td>
+
+          <td>
+            <mat-form-field class="example-full-width">
+              <mat-label>Tipo documento: <span class="text-danger font-weight-bold h6">*</span></mat-label>
+              <mat-select formControlName="documentType">
+                <mat-option>Nada</mat-option>
+                <mat-option value="option1">Cédula de ciudadania</mat-option>
+                <mat-option value="option2">Cédula de extrangeria</mat-option>
+                <mat-option value="option3">Otra</mat-option>
+              </mat-select>
+              <mat-error *ngIf="profileForm.controls['documentType'].errors?.required">Este campo es requerido.
+              </mat-error>
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+      <table class="example-full-width " cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <mat-label>Número documento: <span class="text-danger font-weight-bold h6">*</span></mat-label>
+              <input matInput #documentoNumber maxlength="10" placeholder="Ej. 1000000000"
+                formControlName="documentNumber">
+              <mat-hint align="end">{{documentoNumber.value.length}} / 10</mat-hint>
+              <mat-error *ngIf="profileForm.controls['documentNumber'].errors?.required">Este campo es requerido.
+              </mat-error>
+              <!-- <mat-error *ngIf="profileForm.controls['email'].errors?.email">Ingrese un correo valido.</mat-error> -->
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="example-full-width">
+              <mat-label>Fecha nacimiento: <span class="text-danger font-weight-bold h6">*</span></mat-label>
+              <input matInput [matDatepicker]="picker" placeholder="Ej. DD/MM/AAAA" formControlName="birthDate">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+              <mat-error *ngIf="profileForm.controls['birthDate'].errors?.required">Este campo es requerido.</mat-error>
+              <!-- <mat-error *ngIf="profileForm.controls['email'].errors?.email">Ingrese un correo valido.</mat-error> -->
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="example-full-width">
+              <mat-label>Email: <span class="text-danger font-weight-bold h6">*</span></mat-label>
+              <input matInput placeholder="Ej.  example@gmail.com" formControlName="email">
+              <mat-error *ngIf="profileForm.controls['email'].errors?.required">Este campo es requerido.</mat-error>
+              <mat-error *ngIf="profileForm.controls['email'].errors?.email">Ingrese un correo valido.</mat-error>
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+      <table class="example-full-width " cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <mat-label>Teléfono: </mat-label>
+              <input matInput #telefono maxlength="7" placeholder="Ej. 57000000">
+              <mat-hint align="end">{{telefono.value.length}} / 7</mat-hint>
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="example-full-width">
+              <mat-label>Celular:<span class="text-danger font-weight-bold h6">*</span></mat-label>
+              <input matInput #celular maxlength="10" placeholder="Ej. 3000000000" formControlName="celular">
+              <mat-hint align="end">{{celular.value.length}} / 10</mat-hint>
+              <mat-error *ngIf="profileForm.controls['celular'].errors?.required">Este campo es requerido.</mat-error>
+              <mat-error *ngIf="profileForm.controls['celular'].hasError('minlength')">Celular incorrecto.</mat-error>
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field class="example-full-width">
+              <mat-label>Rol: <span class="text-danger font-weight-bold h6">*</span></mat-label>
+              <mat-select  formControlName="roleId">
+                <mat-option value="1">Administrador</mat-option>
+                <mat-option value="2">Secretaria</mat-option>
+                <mat-option value="3">Docente</mat-option>
+              </mat-select>
+              <mat-error *ngIf="profileForm.controls['roleId'].errors?.required">Este campo es requerido.</mat-error>
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+      <table class="example-full-width " cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <mat-label>Estado: <span class="text-danger font-weight-bold h6">*</span></mat-label>
+              <mat-select [(value)]="selected">
+                <mat-option value="activo">Activo</mat-option>
+                <mat-option value="inactivo">Inactivo</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </td>
+          <td>
+            <!-- appearance="fill" -->
+            <mat-form-field class="example-full-width">
+              <mat-label>Contraseña: <span class="text-danger font-weight-bold h6">*</span></mat-label>
+              <input matInput [type]="hiden ? 'password' : 'text'" formControlName="password">
+              <a mat-icon-button matSuffix (click)="hiden = !hiden" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hiden">
+                <span *ngIf="hiden" class="oi oi-lock-locked"></span>
+                <span *ngIf="!hiden" class="oi oi-lock-unlocked"></span>
+              </a>
+              <mat-error *ngIf="profileForm.controls['password'].errors?.required">Este campo es requerido.</mat-error>
+              <mat-error *ngIf="profileForm.controls['password'].hasError('minlength')">Contraseña insegura.</mat-error>
+            </mat-form-field>
+          </td>
+          <td>
+            <div class="d-flex justify-content-center">
+              <div id="drop-zone" *ngIf="ddarea" (drop)="dropHandler($event)"
+              (dragover)="dragOverHandler($event)">
+              <p style="text-transform: uppercase;">Drag one or more files to this Drop Zone ...</p>
+            </div>
+            <button [disabled]="!profileForm.valid" class=" border-top-0 border-left-0 border-right-0 mb-2 btn-img btn btn-outline-secondary" matInput (click)="onClick()" type="button">
+              <span class="oi oi-paperclip h6 mx-4"></span>
+              <span class="h6 mb-5">Foto</span>
+              <span class="oi oi-arrow-circle-top h6 mx-4"></span>
+            </button>
+            </div>
+           <div>
+            <ul class="text-center mb-1">
+              <li *ngFor="let file of files" [@fadeInOut]="file.state">
+                <mat-progress-bar [value]="file.progress"></mat-progress-bar>
+                <span  id="file-label">
+                  {{file.data.name}}
+                  <a title="Retry" (click)="retryFile(file)" *ngIf="file.canRetry">
+                    <span class="oi oi-reload mx-2 text-info"></span>
+                  </a>
+                  <a title="Cancel" (click)="cancelFile(file)" *ngIf="file.canCancel">
+                    <span class="oi oi-x text-danger"></span>
+                  </a>
+                </span>
+              </li>
+            </ul>
+            <input type="file" id="fileUpload" name="fileUpload" multiple="multiple" accept="{{accept}}"
+              style="display:none;" />
+           </div>
+          </td>
+        </tr>
+      </table>
+      <div class="modal-footer mt-4">
+        <button type="reset" class="btn btn-dark text-white">Limpiar</button>
+        <a aria-label="Close" (click)="modalRef.hide()" class="btn btn-danger text-white">Cancelar</a>
+        <!-- <a class="btn-add text-white" [disabled]="!profileForm.valid">Guardar</a> -->
+        <button class=" btn btn-primary text-white" type="submit" [disabled]="!profileForm.valid">Guardar</button>
+      </div>
+    </form>
+  </div>
+</div>
